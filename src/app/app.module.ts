@@ -8,6 +8,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { TeacherListComponent } from './pages/teacher/teacher-list/teacher-list.component';
 import { TeacherFormComponent } from './pages/teacher/teacher-form/teacher-form.component';
+import { TeacherItemComponent } from './components/teacher-item/teacher-item.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { TeacherFormComponent } from './pages/teacher/teacher-form/teacher-form.
         LandingComponent,
         PageHeaderComponent,
         TeacherListComponent,
-        TeacherFormComponent
+        TeacherFormComponent,
+        TeacherItemComponent
     ],
     imports: [
         AppRoutingModule,
