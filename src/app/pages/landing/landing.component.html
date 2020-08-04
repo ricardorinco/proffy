@@ -12,12 +12,12 @@
         >
 
         <div class="buttons-container">
-            <a href="#" routerLinkActive="router-link-active"  class="study">
+            <a [routerLink]="['/study']" routerLinkActive="router-link-active"  class="study">
                 <img src="./../../../assets/images/icons/study.svg" alt="Estudar">
                 Estudar
             </a>
 
-            <a href="#" class="give-classes">
+            <a [routerLink]="['/given-classes']" class="give-classes">
                 <img src="./../../../assets/images/icons/give-classes.svg" alt="Dar Aulas">
                 Dar aulas
             </a>
