@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './pages/landing/landing.component';
+import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { TeacherListComponent } from './pages/teacher/teacher-list/teacher-list.component';
 import { TeacherFormComponent } from './pages/teacher/teacher-form/teacher-form.component';
 
@@ -12,6 +13,7 @@ import { TeacherFormComponent } from './pages/teacher/teacher-form/teacher-form.
     declarations: [
         AppComponent,
         LandingComponent,
+        PageHeaderComponent,
         TeacherListComponent,
         TeacherFormComponent
     ],

@@ -1,1 +1,20 @@
-<p>teacher-list works!</p>
+<div id="page-teacher-list" class="container">
+    <app-page-header [title]="'Estes são os profys disponíveis.'">
+        <form id="search-teachers">
+            <div class="input-block">
+                <label for="subject">Matéria</label>
+                <input type="text" id="subject" />
+            </div>
+
+            <div class="input-block">
+                <label for="week_day">Dia da Semana</label>
+                <input type="text" id="week_day" />
+            </div>
+
+            <div class="input-block">
+                <label for="time">Hora</label>
+                <input type="text" id="time" />
+            </div>
+        </form>
+    </app-page-header>
+</div>

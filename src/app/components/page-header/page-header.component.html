@@ -1,0 +1,15 @@
+<header class="page-header">
+    <div class="top-bar-container">
+        <a [routerLink]="['/']">
+            <img src="./../../../assets/images/icons/back.svg" alt="Voltar">
+        </a>
+
+        <img src="./../../../../assets/images/logo.svg">
+    </div>
+
+    <div class="header-content">
+        <strong>{{ title }}</strong>
+
+        <ng-content></ng-content>
+    </div>
+</header>
