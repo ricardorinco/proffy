@@ -1,5 +1,63 @@
 <div id="page-teacher-form" class="container">
     <app-page-header
         [title]="'Que incrível que você quer dar aulas.'"
+        [description]="'O primeiro passo é preencher esse formulário de inscrição'"
     ></app-page-header>
+
+    <main>
+        <form [formGroup]="classesForm" (keydown.enter)="sendData()">
+            <fieldset>
+                <legend>Seus dados</legend>
+                    <app-input
+                        label="Nome completo"
+                        [name]="'name'"
+                        [type]="'name'"
+                        formControlName="name"
+                    ></app-input>
+
+                    <app-input
+                        label="Avatar"
+                        [name]="'avatar'"
+                        [type]="'avatar'"
+                        formControlName="avatar"
+                    ></app-input>
+
+                    <app-input
+                        label="WhatsApp"
+                        [name]="'whatsapp'"
+                        [type]="'whatsapp'"
+                        formControlName="whatsapp"
+                    ></app-input>
+            </fieldset>
+
+            <fieldset>
+                <legend>Sobre a aula</legend>
+
+                <app-input
+                    label="Matéria"
+                    [name]="'subject'"
+                    [type]="'subject'"
+                    formControlName="subject"
+                ></app-input>
+
+                <app-input
+                    label="Custo da sua hora por aula"
+                    [name]="'cost'"
+                    [type]="'cost'"
+                    formControlName="cost"
+                ></app-input>
+            </fieldset>
+        </form>
+
+        <footer>
+            <p>
+                <img src="./../../../../assets/images/icons/warning.svg" alt="Aviso importante" />
+                Importante! <br />
+                Preencha todos os dados
+            </p>
+
+            <button type="button" (click)="sendData()" [disabled]="classesForm.invalid">Salvar cadastro</button>
+        </footer>
+
+    </main>
 </div>

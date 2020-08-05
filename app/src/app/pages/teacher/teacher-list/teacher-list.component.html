@@ -1,20 +1,23 @@
 <div id="page-teacher-list" class="container">
     <app-page-header [title]="'Estes são os profys disponíveis.'">
         <form id="search-teachers">
-            <div class="input-block">
-                <label for="subject">Matéria</label>
-                <input type="text" id="subject" />
-            </div>
+            <app-input
+                label="Matéria"
+                [name]="'subject'"
+                [type]="'subject'"
+            ></app-input>
 
-            <div class="input-block">
-                <label for="week_day">Dia da Semana</label>
-                <input type="text" id="week_day" />
-            </div>
+            <app-input
+                label="Dia da Semana"
+                [name]="'week_day'"
+                [type]="'week_day'"
+            ></app-input>
 
-            <div class="input-block">
-                <label for="time">Hora</label>
-                <input type="text" id="time" />
-            </div>
+            <app-input
+                label="Hora"
+                [name]="'time'"
+                [type]="'time'"
+            ></app-input>
         </form>
     </app-page-header>
 

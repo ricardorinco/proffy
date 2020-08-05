@@ -10,6 +10,8 @@
     <div class="header-content">
         <strong>{{ title }}</strong>
 
+        <p *ngIf="description">{{ description }}</p>
+
         <ng-content></ng-content>
     </div>
 </header>
