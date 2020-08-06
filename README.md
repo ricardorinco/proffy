@@ -17,6 +17,21 @@ Projeto desenvolvido com as seguintes tecnologias:
 
 Projeto desenvolvido com base no conteúdo da <b>Next Level Week 2</b>
 
+## 🖥️ Pré-requisito
+
+Baixar e instalar o [NodeJS](https://nodejs.org/en/)
+
+``` bash
+ # Instalando o Angular
+ $ npm install -g @angular/cli
+
+ # Instalando o Expo
+ $ npm install -g expo-cli
+
+ # Instalando o TypeScript
+ $ npm install -g typescript
+```
+
 ## :construction_worker: Como rodar
 
 ``` bash
