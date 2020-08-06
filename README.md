@@ -8,13 +8,14 @@ Este é um projeto que visa conectar professores e estudantes.
 
 Projeto desenvolvido com as seguintes tecnologias:
 
-- [TypeScript](https://www.typescriptlang.org/)
 - [Angular](https://angular.io/)
 - [Express](https://expressjs.com/pt-br/)
+- [Expo](https://expo.io/)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## :computer: Desenvolvimento
 
-Projeto desenvolvido com base no conteúdo da <strong>Next Level Week 2</strong>
+Projeto desenvolvido com base no conteúdo da <b>Next Level Week 2</b>
 
 ## :construction_worker: Como rodar
 
@@ -41,11 +42,23 @@ Projeto desenvolvido com base no conteúdo da <strong>Next Level Week 2</strong>
 
 > Endpoint de acesso da API: http://localhost:3777/
 
+### ⚙️ Resources
+
+ Foi criado uma coleção do para utilizar junto ao <b>Postman</b>, está coleção contém todos os endpoints com seus respectivos objetos de response e request.
+
+``` bash
+ # Navegue até a pasta
+ $ cd proffy/server/resources/postman
+
+ # Arquivo Postman
+ $ Proffy.postman_collection.json
+```
+
 ### 💻 Rodando a aplicação Web
 
 ``` bash
  # Navegue até a pasta
- $ cd proffy/app
+ $ cd proffy/web
 
  # Instale as dependências
  $ npm install
@@ -55,6 +68,19 @@ Projeto desenvolvido com base no conteúdo da <strong>Next Level Week 2</strong>
 ```
 
 > Endereço de acesso da aplicação web: http://localhost:4200/
+
+### 📱 Rodando a aplicação Mobile
+
+``` bash
+ # Navegue até a pasta
+ $ cd proffy/mobile
+
+ # Instale as dependências
+ $ npm install
+
+ # Rodando a aplicação
+ $ npm start
+```
 
 ## :memo: License
 
