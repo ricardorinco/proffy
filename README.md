@@ -2,7 +2,7 @@
 
 Este é um projeto que visa conectar professores e estudantes.
 
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ricardorinco/proffy/develop?label=LAST%20COMMIT%20%28DEVELOP%29&style=for-the-badge)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ricardorinco/proffy/master?label=LAST%20COMMIT%20&style=for-the-badge)
 
 ## :rocket: Tecnologias
 
