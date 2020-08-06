@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 
 @Component({
     selector: 'app-teacher-form',
@@ -9,11 +9,25 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class TeacherFormComponent implements OnInit {
 
     classesForm: FormGroup;
+    scheduleItemsForm: FormArray;
 
     constructor(private formBuilder: FormBuilder) { }
 
     ngOnInit() {
         this.createClassesForm();
+        this.addScheduleItem();
+    }
+
+    addScheduleItem() {
+        this.scheduleItemsForm = this.classesForm.controls.scheduleItems as FormArray;
+
+        this.scheduleItemsForm.push(
+            this.formBuilder.group({
+                week_day: ['', Validators.required],
+                from: ['', Validators.required],
+                to: ['', Validators.required]
+            })
+        );
     }
 
     sendData() {
@@ -28,7 +42,9 @@ export class TeacherFormComponent implements OnInit {
             avatar: ['', Validators.required],
             whatsapp: ['', Validators.required],
             subject: ['', Validators.required],
-            cost: ['', Validators.required]
+            cost: ['', Validators.required],
+            bio: ['', Validators.required],
+            scheduleItems: new FormArray([])
         });
     }
 

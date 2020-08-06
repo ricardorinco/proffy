@@ -1,0 +1,8 @@
+<div class="select-block">
+    <label for="{{ name }}">{{ label }}</label>
+    <select value="" id="{{ name }}" [(ngModel)]="value">
+        <option value="" disabled hidden>Selecione uma opção</option>
+
+        <option *ngFor="let opt of options" value="{{ opt.value }}">{{ opt.label }}</option>
+    </select>
+</div>

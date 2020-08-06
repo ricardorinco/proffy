@@ -103,6 +103,7 @@
 }
 
 #page-teacher-form main footer button:disabled {
+    cursor: not-allowed;
     background: var(--color-secondary-disabled);
 }
 

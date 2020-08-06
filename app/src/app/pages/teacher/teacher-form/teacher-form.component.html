@@ -10,42 +10,102 @@
                 <legend>Seus dados</legend>
                     <app-input
                         label="Nome completo"
+                        formControlName="name"
                         [name]="'name'"
                         [type]="'name'"
-                        formControlName="name"
                     ></app-input>
 
                     <app-input
                         label="Avatar"
+                        formControlName="avatar"
                         [name]="'avatar'"
                         [type]="'avatar'"
-                        formControlName="avatar"
                     ></app-input>
 
                     <app-input
                         label="WhatsApp"
+                        formControlName="whatsapp"
                         [name]="'whatsapp'"
                         [type]="'whatsapp'"
-                        formControlName="whatsapp"
                     ></app-input>
             </fieldset>
 
             <fieldset>
                 <legend>Sobre a aula</legend>
 
-                <app-input
+                <app-select
                     label="Matéria"
-                    [name]="'subject'"
-                    [type]="'subject'"
                     formControlName="subject"
-                ></app-input>
+                    [name]="'subject'"
+                    [options]="[
+                        { value: 'Artes', label: 'Artes' },
+                        { value: 'Português', label: 'Português' },
+                        { value: 'Redação', label: 'Redação' },
+                        { value: 'Inglês', label: 'Inglês' },
+                        { value: 'Matemática', label: 'Matemática' },
+                        { value: 'Física', label: 'Física' },
+                        { value: 'Química', label: 'Química' },
+                        { value: 'Biologia', label: 'Biologia' },
+                        { value: 'História', label: 'História' },
+                        { value: 'Geografia', label: 'Geografia' },
+                        { value: 'Filosofia', label: 'Filosofia' },
+                        { value: 'Sociologia', label: 'Sociologia' },
+                        { value: 'Educação Física', label: 'Educação Física' }
+                    ]"
+                ></app-select>
 
                 <app-input
                     label="Custo da sua hora por aula"
+                    formControlName="cost"
                     [name]="'cost'"
                     [type]="'cost'"
-                    formControlName="cost"
                 ></app-input>
+
+                <app-text-area
+                    label="Biografia"
+                    formControlName="bio"
+                    [name]="'bio'"
+                ></app-text-area>
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    Horários disponíveis
+                    <button type="button" (click)="addScheduleItem()">+ Novo Horário</button>
+                </legend>
+
+                <div class="list-group-item" *ngFor="let scheduleItem of scheduleItemsForm.controls; let i = index">
+                    <div class="schedule-item" [formGroup]="scheduleItem">
+                        <app-select
+                            label="Dia da Semana"
+                            formControlName="week_day"
+                            [name]="'week_day'"
+                            [options]="[
+                                { value: '0', label: 'Domingo' },
+                                { value: '1', label: 'Segunda-feira' },
+                                { value: '2', label: 'Terça-feira' },
+                                { value: '3', label: 'Quarta-feira' },
+                                { value: '4', label: 'Quinta-feira' },
+                                { value: '5', label: 'Sexta-feira' },
+                                { value: '6', label: 'Sábado' }
+                            ]"
+                        ></app-select>
+
+                        <app-input
+                            label="Das"
+                            formControlName="from"
+                            [name]="'from'"
+                            [type]="'time'"
+                        ></app-input>
+
+                        <app-input
+                            label="Até"
+                            formControlName="to"
+                            [name]="'to'"
+                            [type]="'time'"
+                        ></app-input>
+                    </div>
+                </div>
             </fieldset>
         </form>
 
@@ -58,6 +118,5 @@
 
             <button type="button" (click)="sendData()" [disabled]="classesForm.invalid">Salvar cadastro</button>
         </footer>
-
     </main>
 </div>

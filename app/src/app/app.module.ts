@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { InputComponent } from './components/input/input.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
+import { SelectComponent } from './components/select/select.component';
 import { TeacherListComponent } from './pages/teacher/teacher-list/teacher-list.component';
 import { TeacherFormComponent } from './pages/teacher/teacher-form/teacher-form.component';
 import { TeacherItemComponent } from './components/teacher-item/teacher-item.component';
@@ -21,6 +22,7 @@ import { TextAreaComponent } from './components/text-area/text-area.component';
         InputComponent,
         LandingComponent,
         PageHeaderComponent,
+        SelectComponent,
         TeacherListComponent,
         TeacherFormComponent,
         TeacherItemComponent,
