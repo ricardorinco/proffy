@@ -1,23 +1,27 @@
 <article class="teacher-item">
     <header>
-        <img src="{{ classe.avatar }}" alt="{{ classe.name }}">
+        <img src="{{ teacher?.avatar }}" alt="{{ teacher?.name }}">
 
         <div>
-            <strong>{{ classe.name }}</strong>
-            <span>{{ classe.subject }}</span>
+            <strong>{{ teacher?.name }}</strong>
+            <span>{{ teacher?.subject }}</span>
         </div>
     </header>
 
     <p>
-        {{ classe.bio }}
+        {{ teacher?.bio }}
     </p>
 
     <footer>
-        <p>Preço/hora <strong>{{ classe.cost | currency: 'BRL' }}</strong></p>
+        <p>Preço/hora <strong>{{ teacher?.cost | currency: 'BRL' }}</strong></p>
 
-        <button type="button" (click)="addConnection(classe.user_id)">
+        <a
+            href="https://wa.me/{{ teacher?.whatsapp }}"
+            target="_blank"
+            (click)="addConnection(teacher?.user_id)"
+        >
             <img src="./../../../../assets/images/icons/whatsapp.svg" alt="Whatsapp">
             Entrar em contato
-        </button>
+        </a>
     </footer>
 </article>

@@ -12,7 +12,7 @@ import { Classe } from './../../models/classe';
 })
 export class TeacherItemComponent {
 
-    @Input() classe: Classe;
+    @Input() teacher: Classe;
 
     constructor(private connectionsService: ConnectionsService) { }
 
@@ -21,7 +21,6 @@ export class TeacherItemComponent {
 
         this.connectionsService.add(connectionAddRequest)
             .subscribe({
-                next: () => console.log('Jesus'),
                 error: (error: Error) => {
                     console.error(`Unexpected error. Error message: ${error.message}`)
                 }
