@@ -3,50 +3,34 @@
         <form id="search-teachers">
             <app-select
                 label="Matéria"
+                [(ngModel)]="subjectFilter"
                 [name]="'subject'"
-                [options]="[
-                    { value: 'Artes', label: 'Artes' },
-                    { value: 'Português', label: 'Português' },
-                    { value: 'Redação', label: 'Redação' },
-                    { value: 'Inglês', label: 'Inglês' },
-                    { value: 'Matemática', label: 'Matemática' },
-                    { value: 'Física', label: 'Física' },
-                    { value: 'Química', label: 'Química' },
-                    { value: 'Biologia', label: 'Biologia' },
-                    { value: 'História', label: 'História' },
-                    { value: 'Geografia', label: 'Geografia' },
-                    { value: 'Filosofia', label: 'Filosofia' },
-                    { value: 'Sociologia', label: 'Sociologia' },
-                    { value: 'Educação Física', label: 'Educação Física' }
-                ]"
+                [options]="subjects"
+                (ngModelChange)="changeFilters()"
             ></app-select>
 
             <app-select
                 label="Dia da Semana"
+                [(ngModel)]="weekDayFilter"
                 [name]="'week_day'"
-                [options]="[
-                    { value: '0', label: 'Domingo' },
-                    { value: '1', label: 'Segunda-feira' },
-                    { value: '2', label: 'Terça-feira' },
-                    { value: '3', label: 'Quarta-feira' },
-                    { value: '4', label: 'Quinta-feira' },
-                    { value: '5', label: 'Sexta-feira' },
-                    { value: '6', label: 'Sábado' }
-                ]"
+                [options]="weekDays"
+                (ngModelChange)="changeFilters()"
             ></app-select>
 
             <app-input
                 label="Hora"
+                [(ngModel)]="timeFilter"
                 [name]="'time'"
                 [type]="'time'"
+                (ngModelChange)="changeFilters()"
             ></app-input>
         </form>
     </app-page-header>
 
     <main>
-        <app-teacher-item></app-teacher-item>
-        <app-teacher-item></app-teacher-item>
-        <app-teacher-item></app-teacher-item>
-        <app-teacher-item></app-teacher-item>
+        <app-teacher-item
+            *ngFor="let classe of classes"
+            [classe]="classe"
+        ></app-teacher-item>
     </main>
 </div>

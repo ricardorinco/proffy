@@ -1,27 +1,21 @@
 <article class="teacher-item">
     <header>
-        <img src="https://avatars2.githubusercontent.com/u/15218904?s=460&u=afab9270cf49581494eb2fd894cc57879089799e&v=4" alt="Ricardo Rinco">
+        <img src="{{ classe.avatar }}" alt="{{ classe.name }}">
 
         <div>
-            <strong>Ricardo Rinco</strong>
-            <span>Desenvolvimento</span>
+            <strong>{{ classe.name }}</strong>
+            <span>{{ classe.subject }}</span>
         </div>
     </header>
 
     <p>
-        Take that you mutated son-of-a-bitch. My pine, why you. You space bastard, you killed a pine. Oh, I've been so worried about you ever since you ran off the other night. Are you okay? I'm sorry I have to go. Isn't he a dream boat? Hey Dad, George, hey, you on the bike. Roads? Where we're going we don't need roads. Are you sure about this storm?
-        <br /><br />
-
-        What's a rerun? Doc, you gotta help- Marty, is that you? It's uh, the other end of town, a block past Maple. Really.
-        <br /><br />
-
-        George. I don't worry. this is all wrong. I don't know what it is but when I kiss you, it's like kissing my brother. I guess that doesn't make any sense, does it? What were you doing in the middle of the street, a kid your age. Just say anything, George, say what ever's natural, the first thing that comes to your mind. Marty, will we ever see you again?
+        {{ classe.bio }}
     </p>
 
     <footer>
-        <p>Preço /hora <strong>R$ 80,00</strong></p>
+        <p>Preço/hora <strong>{{ classe.cost | currency: 'BRL' }}</strong></p>
 
-        <button type="button">
+        <button type="button" (click)="addConnection(classe.user_id)">
             <img src="./../../../../assets/images/icons/whatsapp.svg" alt="Whatsapp">
             Entrar em contato
         </button>

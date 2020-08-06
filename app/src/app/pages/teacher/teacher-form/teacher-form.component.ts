@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 
+import { ClassesService } from './../../../services/classes.service';
+
+import { ClasseAddRequest } from './../../../models/classe-add-request';
+
 @Component({
     selector: 'app-teacher-form',
     templateUrl: './teacher-form.component.html',
@@ -11,7 +15,10 @@ export class TeacherFormComponent implements OnInit {
     classesForm: FormGroup;
     scheduleItemsForm: FormArray;
 
-    constructor(private formBuilder: FormBuilder) { }
+    constructor(
+        private formBuilder: FormBuilder,
+        private classesService: ClassesService
+    ) { }
 
     ngOnInit() {
         this.createClassesForm();
@@ -32,7 +39,15 @@ export class TeacherFormComponent implements OnInit {
 
     sendData() {
         if (this.classesForm.valid) {
-            const addClassesRequest = this.classesForm.value;
+            const classeAddRequest: ClasseAddRequest = this.classesForm.value;
+
+            this.classesService.add(classeAddRequest)
+                .subscribe({
+                    next: () => this.classesForm.reset(),
+                    error: (error: Error) => {
+                        console.error(`Unexpected error. Error message: ${error.message}`)
+                    }
+                });
         }
     }
 

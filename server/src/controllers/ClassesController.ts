@@ -36,7 +36,7 @@ export default class ClassesController {
     }
 
     async create(request: Request, response: Response) {
-        const { name, avatar, whatsapp, bio, subject, cost, schedule } = request.body;
+        const { name, avatar, whatsapp, bio, subject, cost, scheduleItems } = request.body;
         const transaction = await database.transaction();
 
         try {
@@ -55,7 +55,7 @@ export default class ClassesController {
             });
             const class_id = insertedClassesId[0];
 
-            const classSchedule = schedule.map(
+            const classSchedule = scheduleItems.map(
                 (scheduleItem: ScheduleItem) => ({
                     class_id,
                     week_day: scheduleItem.week_day,

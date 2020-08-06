@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Users",
+			"name": "Classes",
 			"item": [
 				{
 					"name": "Obter aulas",
@@ -48,7 +48,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Marty McFly\",\r\n    \"avatar\": \"https://i1.sndcdn.com/avatars-000027317119-jbsdrv-t500x500.jpg\",\r\n    \"whatsapp\": \"11998542144\",\r\n    \"bio\": \"Marty McFly, é um personagem fictício e protagonista da trilogia Back to the Future (br: De Volta para o Futuro), representado pelo ator Michael J. Fox nos três filmes.\",\r\n    \"subject\": \"Física\",\r\n    \"cost\": 80,\r\n    \"schedule\": [\r\n        { \"week_day\": 1, \"from\": \"8:00\", \"to\": \"12:00\" },\r\n        { \"week_day\": 3, \"from\": \"8:00\", \"to\": \"12:00\" },\r\n        { \"week_day\": 5, \"from\": \"8:00\", \"to\": \"12:00\" }\r\n    ]\r\n}\r\n",
+							"raw": "{\r\n    \"name\": \"Marty McFly\",\r\n    \"avatar\": \"https://i1.sndcdn.com/avatars-000027317119-jbsdrv-t500x500.jpg\",\r\n    \"whatsapp\": \"11998542144\",\r\n    \"bio\": \"Marty McFly, é um personagem fictício e protagonista da trilogia Back to the Future (br: De Volta para o Futuro), representado pelo ator Michael J. Fox nos três filmes.\",\r\n    \"subject\": \"Física\",\r\n    \"cost\": 80,\r\n    \"scheduleItems\": [\r\n        { \"week_day\": 1, \"from\": \"8:00\", \"to\": \"12:00\" },\r\n        { \"week_day\": 3, \"from\": \"8:00\", \"to\": \"12:00\" },\r\n        { \"week_day\": 5, \"from\": \"8:00\", \"to\": \"12:00\" }\r\n    ]\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
