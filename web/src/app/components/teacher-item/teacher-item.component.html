@@ -1,0 +1,27 @@
+<article class="teacher-item">
+    <header>
+        <img src="{{ teacher?.avatar }}" alt="{{ teacher?.name }}">
+
+        <div>
+            <strong>{{ teacher?.name }}</strong>
+            <span>{{ teacher?.subject }}</span>
+        </div>
+    </header>
+
+    <p>
+        {{ teacher?.bio }}
+    </p>
+
+    <footer>
+        <p>Preço/hora <strong>{{ teacher?.cost | currency: 'BRL' }}</strong></p>
+
+        <a
+            href="https://wa.me/{{ teacher?.whatsapp }}"
+            target="_blank"
+            (click)="addConnection(teacher?.user_id)"
+        >
+            <img src="./../../../../assets/images/icons/whatsapp.svg" alt="Whatsapp">
+            Entrar em contato
+        </a>
+    </footer>
+</article>
