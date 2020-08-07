@@ -8,8 +8,8 @@ import TeacherList from './../pages/TeacherList';
 const { Navigator, Screen } = createBottomTabNavigator();
 
 function StudyTabs() {
-    return (
-        <Navigator
+  return (
+      <Navigator
             tabBarOptions={{
                 style: {
                     elevation: 0,
@@ -42,33 +42,32 @@ function StudyTabs() {
             }}
         >
 
-            <Screen 
-                name="TeacherList" 
-                component={TeacherList} 
+            <Screen
+                name='TeacherList'
+                component={TeacherList}
                 options={{
                     tabBarLabel: 'Proffys',
                     tabBarIcon: ({ color, size, focused }) => {
                         return (
-                            <Ionicons name="ios-easel" size={size} color={focused ? '#8257e5' :color}/>
+                            <Ionicons name='ios-easel' size={size} color={focused ? '#8257e5' : color} />
                         );
-                    }
+                    },
                 }}
             />
-
-            <Screen 
-                name="Favorites" 
+            <Screen
+                name='Favorites'
                 component={Favorites}
                 options={{
                     tabBarLabel: 'Favoritos',
                     tabBarIcon: ({ color, size, focused }) => {
                         return (
-                            <Ionicons name="ios-heart" size={size} color={focused ? '#8257e5' :color}/>
+                            <Ionicons name='ios-heart' size={size}color={focused ? '#8257e5' : color}/>
                         );
-                    }
-                }} 
+                    },
+                }}
             />
         </Navigator>
-    );
+  );
 }
 
 export default StudyTabs;
